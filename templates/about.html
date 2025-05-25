@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+<section class="bg-white text-gray-800">
+    <div class="container px-5 py-16 mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-600 mb-4">About Us</h1>
+            <p class="text-lg leading-relaxed">
+                Welcome to <strong>PredictPlus Insurance</strong>, where innovation meets simplicity to redefine your insurance experience.
+            </p>
+        </div>
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/2">
+                <img src="{% static 'AI.jpg' %}" alt="AI-powered insights" class="rounded-lg shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="w-full md:w-1/2 px-6">
+                <h2 class="text-2xl font-medium text-gray-900 mb-4">Our Mission</h2>
+                <p class="leading-relaxed mb-4">
+                    At <strong>PredictPlus Insurance</strong>, we aim to simplify insurance decisions using advanced analytics and AI.
+                    We provide transparent, tailored, and accessible solutions that empower you to make informed choices.
+                </p>
+                <ul class="list-disc ml-6">
+                    <li>Accurate premium predictions based on individual parameters.</li>
+                    <li>Easy-to-understand recommendations tailored to your needs.</li>
+                    <li>Faster and more reliable decision-making processes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-100 text-gray-800">
+    <div class="container px-5 py-16 mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-semibold text-indigo-600 mb-4">What We Offer</h2>
+            <p class="text-lg">
+                Leveraging AI-driven solutions to deliver reliable insurance insights.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <img class="rounded-lg mb-4" src="https://dummyimage.com/720x400" alt="Personalized Estimates">
+                <h3 class="text-xl font-medium text-gray-900 mb-2">Personalized Estimates</h3>
+                <p>Receive customized predictions tailored to your unique needs.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <img class="rounded-lg mb-4" src="https://dummyimage.com/720x400" alt="Reliable Insights">
+                <h3 class="text-xl font-medium text-gray-900 mb-2">Reliable Insights</h3>
+                <p>Trust our models for accurate and consistent premium calculations.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <img class="rounded-lg mb-4" src="https://dummyimage.com/720x400" alt="Data-Driven Decisions">
+                <h3 class="text-xl font-medium text-gray-900 mb-2">Data-Driven Decisions</h3>
+                <p>Make smarter choices with predictions backed by robust data analysis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-indigo-600 text-white">
+    <div class="container px-5 py-16 mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">Join Us</h2>
+        <p class="text-lg mb-6">
+            Take control of your insurance journey today with <strong>PredictPlus Insurance</strong>.
+        </p>
+        <a href="/contact" class="btn btn-light text-indigo-600 font-semibold py-2 px-6 rounded-lg hover:bg-gray-100">
+            Contact Us
+        </a>
+    </div>
+</section>
+{% endblock body %}

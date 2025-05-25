@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<section class="bg-gray-50 text-gray-800 py-12">
+    <div class="container px-5 py-12 mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-600 mb-4">Contact Us</h1>
+            <p class="lg:w-2/3 mx-auto text-lg text-gray-600">
+                Provide your details below for insurance-related inquiries and premium estimations.
+            </p>
+        </div>
+        <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+            <form method="post" action="/contact/">
+                {% csrf_token %}
+                <!-- Name -->
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" 
+                           class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+                           placeholder="Enter your full name">
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" 
+                           class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+                           placeholder="Enter your email address">
+                </div>
+
+                <!-- Age -->
+                <div class="mb-4">
+                    <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                    <input type="number" id="age" name="age" 
+                           class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+                           placeholder="Enter your age">
+                </div>
+
+                <!-- Gender -->
+                <div class="mb-4">
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender" 
+                            class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Occupation -->
+                <div class="mb-4">
+                    <label for="occupation" class="block text-sm font-medium text-gray-700">Occupation</label>
+                    <input type="text" id="occupation" name="occupation" 
+                           class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+                           placeholder="Enter your occupation">
+                </div>
+
+                <!-- Health Conditions -->
+                <div class="mb-4">
+                    <label for="health_conditions" class="block text-sm font-medium text-gray-700">Pre-existing Health Conditions</label>
+                    <textarea id="health_conditions" name="health_conditions" 
+                              class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none h-32 resize-none" 
+                              placeholder="List any pre-existing health conditions"></textarea>
+                </div>
+
+                <!-- Coverage Amount -->
+                <div class="mb-6">
+                    <label for="coverage_amount" class="block text-sm font-medium text-gray-700">Desired Coverage Amount</label>
+                    <input type="number" id="coverage_amount" name="coverage_amount" 
+                           class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+                           placeholder="Enter the desired coverage amount">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" 
+                            class="text-white bg-indigo-500 hover:bg-indigo-600 px-8 py-2 rounded-lg text-lg font-medium focus:outline-none">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <div class="text-center mt-8 pt-8 border-t border-gray-200">
+                <a href="mailto:support@insurance.com" class="text-indigo-500">support@ChandanBanjara.com</a>
+                <p class="mt-2 text-gray-600">123 Insurance St.<br>Bhopal,Madhya Pradesh, INDIA</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
